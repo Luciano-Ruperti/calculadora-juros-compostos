@@ -6,5 +6,5 @@ document.getElementById("calc-btn").addEventListener("click", function () {
   const total = value * (1 + fee) ** time;
 
   document.getElementById("total").innerHTML =
-    "R$ " + total.toFixed(2).replace(".", ",");
+    "R$ " + total.toLocaleString("pt-BR", { maximumFractionDigits: 2 });
 });
